@@ -12,16 +12,22 @@ public class Route {
     String id;
     String source;
     String dest;
-    List<Signal> signals = new ArrayList<>();
+    String points;
+    String signals;
     String path;
     String conflicts;
     int direction;//0->DOWN   1->UP
 
+    public Route(){
 
-    public Route(String id,String source,String dest,String path,int direction){
+    }
+
+    public Route(String id,String source,String dest,String points,String signals,String path,int direction){
         this.id = id;
         this.source = source;
         this.dest = dest;
+        this.points = points;
+        this.signals = signals;
         this.path = path;
         this.direction = direction;
     }
@@ -89,16 +95,12 @@ public class Route {
 //        System.out.println(this.source+" "+this.dest+" "+points+" "+signals+" "+paths+" "+conflicts);
     }
 
-    public Route() {
-
-    }
-
     /**
     * get route by its id
     *
     * */
     public Route getById(List<Route> routes,String id){
-        Route r = null;
+        Route r = new Route();
         for (int i = 0; i < routes.size(); i++) {
             Route route = routes.get(i);
             if (route.getId().equals(id)){
@@ -136,6 +138,15 @@ public class Route {
         return r;
     }
 
+
+    public String getPoints() {
+        return points;
+    }
+
+    public void setPoints(String points) {
+        this.points = points;
+    }
+
     public int getDirection() {
         return direction;
     }
@@ -168,11 +179,11 @@ public class Route {
         this.dest = dest;
     }
 
-    public List<Signal> getSignals() {
+    public String getSignals() {
         return signals;
     }
 
-    public void setSignals(List<Signal> signals) {
+    public void setSignals(String signals) {
         this.signals = signals;
     }
 
