@@ -16,10 +16,6 @@ public class Railway {
     List<Route> upRoutes = new ArrayList<>();
     List<Route> downRoutes = new ArrayList<>();
     List<Journey> journeys = new ArrayList<>();
-//    List<Journey> runnings = new ArrayList<>();//current running routes
-//    List<Journey> waitings = new ArrayList<>();//current waiting routes
-
-//    List<String> possibles = new ArrayList<>();
 
     public Railway() {
 
@@ -30,7 +26,6 @@ public class Railway {
 
         for (int i = 0; i < this.routes.size(); i++) {
             Route route = Route.dao.getById(this.routes, this.routes.get(i).getId());
-//            System.out.println("Now route is " + route.getId() + " and direction is " + route.getDirection());
             if (route.getDirection() == 1) {//signal direction=0->down  1->up
                 this.upRoutes.add(route);
             } else {
@@ -40,14 +35,12 @@ public class Railway {
 
         for (int i = 0; i < this.signals.size(); i++) {
             Signal signal = Signal.dao.getByName(this.signals, this.signals.get(i).getName());
-//            System.out.println("Now signal is " + signal.getName() + " and direction is " + signal.getDirection());
             if (signal.getDirection() == 1) {//signal direction=0->down  1->up
                 this.upSignals.add(signal);
             } else {
                 this.downSignals.add(signal);
             }
         }
-//        System.out.println(this.upSignals.size() + " " + this.downSignals.size());
 
     }
 
@@ -86,12 +79,10 @@ public class Railway {
                     System.out.println("Block " + this.blocks.get(j).getName() + "  :  " + this.blocks.get(j).getOccupy());
                 }
                 if (flag) {
-//                    waiting.setState(1);//set the state of this train to running
                     this.journeys.get(i).setState(1);
 
                     Route route = Route.dao.getById(this.routes,waiting.getCurrentRoute());
 
-//                    this.journeys.get(i).setCurrentBlock(route.getPath().split(";")[0]);//set the current block to the first route path[0]
                     System.out.println("Journey " + this.journeys.get(i).getId() + " satisfies all conditions and set to " + this.journeys.get(i).getState() + " and lock all signals in this route");
 
                     String currentRoute = waiting.getCurrentRoute();
@@ -131,14 +122,9 @@ public class Railway {
                     }
                 }
 
-//                System.out.println("Left routes are "+routes.size());
-
                 Route route = routes.get(0);
                 String paths = route.getPath();
-//                System.out.println("paths are " + paths);
-
                 String[] path = paths.split(";");
-//                System.out.println("path's size is "+path.length);
 
                 boolean isInArray = false;
                 for (int k = 0; k < path.length; k++) {
