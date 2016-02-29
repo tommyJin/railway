@@ -4,6 +4,8 @@ import Model.Block;
 import Model.Railway;
 import Model.Route;
 import Model.Signal;
+import com.google.gson.Gson;
+import org.json.JSONObject;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -118,14 +120,14 @@ public class JsonFile {
         list.add(r6);
 
         signals.clear();
-        Route r7 = new Route("r7","s3","s2","p1:m","s1;s3","p1;b2",0);
+        Route r7 = new Route("r7","s3","s2","p1:m","s1;s5","p1;b2",0);
         signals.add(s1);
         signals.add(s6);
 //        r7.setSignals(signals);
         list.add(r7);
 
         signals.clear();
-        Route r8 = new Route("r8","s5","s2","p1:p","s1;s5","p1;b2",0);
+        Route r8 = new Route("r8","s5","s2","p1:p","s1;s3","p1;b2",0);
         signals.add(s1);
         signals.add(s6);
 //        r8.setSignals(signals);
@@ -138,6 +140,19 @@ public class JsonFile {
         Railway railway = new Railway();
         return railway;
     }
+
+
+    /**
+    * read railway object from json file
+    * */
+    public Railway returnRailway(){
+        Gson gson = new Gson();
+        String jsonStr = readFile("./src/test.json");
+        Railway railway = gson.fromJson(jsonStr,Railway.class);
+        System.out.println(railway.getSignals().size()+" "+railway.getBlocks().get(0).getName());
+        return railway;
+    }
+
 
     public static void writeFile(String filePath, String sets)
             throws  IOException {

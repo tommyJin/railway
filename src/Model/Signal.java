@@ -11,7 +11,7 @@ public class Signal {
 
     String name;
     int direction;// 0 -> DOWN    1 -> UP
-    int position=0;//0 -> stop    1 -> go
+    int position=1;//0 -> stop    1 -> go
     String controllBlock;//control which block to access
     String currentBlock;//in which block
 
