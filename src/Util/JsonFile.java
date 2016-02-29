@@ -16,14 +16,14 @@ public class JsonFile {
 
     public List<Signal> getSignal(){
         List<Signal> list = new ArrayList<>();
-        Signal s1 = new Signal("s1",1,"b2","s4;s6");
-        Signal s2 = new Signal("s2",0,"b1","");
-        Signal s3 = new Signal("s3",0,"p1","s2");
-        Signal s4 = new Signal("s4",1,"p2","s7");
-        Signal s5 = new Signal("s5",0,"p1","s2");
-        Signal s6 = new Signal("s6",1,"p2","s7");
-        Signal s7 = new Signal("s7",1,"b6","");
-        Signal s8 = new Signal("s8",0,"b5","s3;s5");
+        Signal s1 = new Signal("s1",1, "b1", "b2","s4;s6");
+        Signal s2 = new Signal("s2",0, "b2", "b1","");
+        Signal s3 = new Signal("s3",0, "b3", "p1","s2");
+        Signal s4 = new Signal("s4",1, "b3", "p2","s7");
+        Signal s5 = new Signal("s5",0, "b4", "p1","s2");
+        Signal s6 = new Signal("s6",1, "b4", "p2","s7");
+        Signal s7 = new Signal("s7",1, "b5", "b6","");
+        Signal s8 = new Signal("s8",0, "b6", "b5","s3;s5");
         list.add(s1);
         list.add(s2);
         list.add(s3);
@@ -60,14 +60,14 @@ public class JsonFile {
     public List<Route> getRoute(){
         List<Route> list = new ArrayList<>();
 
-        Signal s1 = new Signal("s1",1,"b2","s4;s6");
-        Signal s2 = new Signal("s2",0,"b1","");
-        Signal s3 = new Signal("s3",0,"p1","s2");
-        Signal s4 = new Signal("s4",1,"p2","s7");
-        Signal s5 = new Signal("s5",0,"p1","s2");
-        Signal s6 = new Signal("s6",1,"p2","s7");
-        Signal s7 = new Signal("s7",1,"b6","");
-        Signal s8 = new Signal("s8",0,"b5","s3;s5");
+        Signal s1 = new Signal("s1",1, "b1", "b2","s4;s6");
+        Signal s2 = new Signal("s2",0, "b2", "b1","");
+        Signal s3 = new Signal("s3",0, "b3", "p1","s2");
+        Signal s4 = new Signal("s4",1, "b3", "p2","s7");
+        Signal s5 = new Signal("s5",0, "b4", "p1","s2");
+        Signal s6 = new Signal("s6",1, "b4", "p2","s7");
+        Signal s7 = new Signal("s7",1, "b5", "b6","");
+        Signal s8 = new Signal("s8",0, "b6", "b5","s3;s5");
 
         Route r1 = new Route("r1","s1","s6","p1:p;p2:m","s2;s3;s5","b2;p1;b4",1);
         List<Signal> signals = new ArrayList<>();

@@ -8,18 +8,44 @@ import java.util.List;
  */
 public class Journey {
     String id;
-    int state;//0->waiting   1->running
+    int state;//0->waiting   1->running   2->end
     String source;
     String dest;
-    String current;//current route
-    String currentBlock;
-    List<Route> all = new ArrayList<>();
-    List<Route> visited = new ArrayList<>();
+    String currentRoute;//current route
+    String currentBlock;//current block
+    List<Route> routes = new ArrayList<>();
+//    List<Route> visited = new ArrayList<>();
+//    List<Route> rest = new ArrayList<>();
 
     public Journey(String id,String source, String dest) {
         this.id = id;
+        this.state = 0;
         this.source = source;
         this.dest = dest;
+    }
+
+    public String getCurrentRoute() {
+        return currentRoute;
+    }
+
+    public void setCurrentRoute(String currentRoute) {
+        this.currentRoute = currentRoute;
+    }
+
+    public List<Route> getRoutes() {
+        return routes;
+    }
+
+    public void setRoutes(List<Route> routes) {
+        this.routes = routes;
+    }
+
+    public String getCurrentBlock() {
+        return currentBlock;
+    }
+
+    public void setCurrentBlock(String currentBlock) {
+        this.currentBlock = currentBlock;
     }
 
     public String getId() {
@@ -54,27 +80,4 @@ public class Journey {
         this.dest = dest;
     }
 
-    public String getCurrent() {
-        return current;
-    }
-
-    public void setCurrent(String current) {
-        this.current = current;
-    }
-
-    public List<Route> getAll() {
-        return all;
-    }
-
-    public void setAll(List<Route> all) {
-        this.all = all;
-    }
-
-    public List<Route> getVisited() {
-        return visited;
-    }
-
-    public void setVisited(List<Route> visited) {
-        this.visited = visited;
-    }
 }

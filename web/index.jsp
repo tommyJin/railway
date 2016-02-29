@@ -88,15 +88,7 @@
 
         <p>Simple is beautiful.</p>
 
-        <div id="carbonads-container">
-            <div class="carbonad">
-                <div id="azcarbon"></div>
-                <script>var z = document.createElement("script");
-                z.async = !0, z.src = "http://engine.carbonads.com/z/32341/azcarbon_2_1_0_HORIZ";
-                var s = document.getElementsByTagName("script")[0];
-                s.parentNode.insertBefore(z, s);</script>
-            </div>
-        </div>
+
     </div>
 </div>
 
@@ -245,25 +237,25 @@
 
 <form id="form1" method="post">
     <p>
-        评论：
+        comment:
     </p>
 
     <p>
-        姓名：
+        username:
         <input type="text" name="username" id="username"/>
     </p>
 
     <p>
-        内容：
+        content:
         <textarea name="content" id="content" rows="2" cols="20"></textarea>
     </p>
 
     <p>
-        <input type="button" id="send" value="提交" onclick="jsonAjaxPost()"/>
+        <input type="button" id="send" value="submit" onclick="jsonAjaxPost()"/>
     </p>
 </form>
 <div class="comment">
-    返回数据：
+    return value:
     <p id="resultJsonText"></p>
 </div>
 <div id="resText">

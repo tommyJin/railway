@@ -32,10 +32,6 @@ public class Route {
         this.direction = direction;
     }
 
-//    public List<Section> getSection(String source,String dest){
-//        List<Section> list = new ArrayList<>();
-//        return list;
-//    }
 
     public Route(String source, String dest, String block, String signal, String path, String conflict) {
         this.source = source;

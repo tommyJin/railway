@@ -15,6 +15,7 @@ import java.util.Map;
 /**
  * Created by tommy on 2016/2/27.
  */
+
 public class Hello extends HttpServlet{
 
     public void doGet(HttpServletRequest request,
@@ -46,7 +47,6 @@ public class Hello extends HttpServlet{
 
         response.setCharacterEncoding("utf-8");
         PrintWriter out = response.getWriter();
-        //将数据拼接成JSON格式
         out.print(gson.toJson(map));
         out.flush();
         out.close();
@@ -54,6 +54,5 @@ public class Hello extends HttpServlet{
 
     public void destroy()
     {
-        // 什么也不做
     }
 }

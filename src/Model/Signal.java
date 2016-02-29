@@ -12,18 +12,18 @@ public class Signal {
     String name;
     int direction;// 0 -> DOWN    1 -> UP
     int position=0;//0 -> stop    1 -> go
-    String blockName;//control which block to access
-    String next;//next signals   s2;s4;s6
-    String[] nextArray;
+    String controllBlock;//control which block to access
+    String currentBlock;//in which block
+
 
     public Signal() {
     }
 
-    public Signal(String name, int direction, String blockName,String next) {
+    public Signal(String name, int direction, String currentBlock , String controllBlock,String next) {
         this.name = name;
         this.direction = direction;
-        this.blockName = blockName;
-        this.next = next;
+        this.controllBlock = controllBlock;
+        this.currentBlock = currentBlock;
     }
 
     /**
@@ -43,7 +43,6 @@ public class Signal {
     }
 
 
-
     public int getPosition() {
         return position;
     }
@@ -52,12 +51,20 @@ public class Signal {
         this.position = position;
     }
 
-    public String getBlockName() {
-        return blockName;
+    public String getControllBlock() {
+        return controllBlock;
     }
 
-    public void setBlockName(String blockName) {
-        this.blockName = blockName;
+    public void setControllBlock(String controllBlock) {
+        this.controllBlock = controllBlock;
+    }
+
+    public String getCurrentBlock() {
+        return currentBlock;
+    }
+
+    public void setCurrentBlock(String currentBlock) {
+        this.currentBlock = currentBlock;
     }
 
     public String getName() {
@@ -76,19 +83,4 @@ public class Signal {
         this.direction = direction;
     }
 
-    public String getNext() {
-        return next;
-    }
-
-    public void setNext(String next) {
-        this.next = next;
-    }
-
-    public String[] getNextArray() {
-        return nextArray;
-    }
-
-    public void setNextArray(String[] nextArray) {
-        this.nextArray = nextArray;
-    }
 }
