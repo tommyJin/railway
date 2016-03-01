@@ -76,7 +76,11 @@ public class Railway {
                     System.out.println("Signal " + this.signals.get(j).getName() + "  :  " + this.signals.get(j).getPosition());
                 }
                 for (int j = 0; j < this.blocks.size(); j++) {
-                    System.out.println("Block " + this.blocks.get(j).getName() + "  :  " + this.blocks.get(j).getOccupy());
+                    if (this.blocks.get(j).getType() == 1) {//point
+                        System.out.println("Point " + this.blocks.get(j).getName() + "  :  " + this.blocks.get(j).getOccupy() + "  position: " + (this.blocks.get(j).getPosition() == 0 ? "PLUS" : "MINUS"));
+                    } else {
+                        System.out.println("Block " + this.blocks.get(j).getName() + "  :  " + this.blocks.get(j).getOccupy());
+                    }
                 }
                 if (flag) {
                     this.journeys.get(i).setState(1);

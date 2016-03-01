@@ -10,7 +10,6 @@ public class Block{
     String previous;// previous section
     String next;// next section
     String occupy;//occupy by which journeyId   j1,j2
-//    List<Section> neighs = new ArrayList<>();// 2 neighs for track and 3 neighs for point
 
     public Block(String name, int type, String previous, String next) {
         this.name = name;
@@ -18,7 +17,6 @@ public class Block{
         this.previous = previous;
         this.next = next;
         this.occupy="";
-//        this.position = position;
     }
 
     public String getOccupy() {

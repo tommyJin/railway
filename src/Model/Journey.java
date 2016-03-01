@@ -14,8 +14,6 @@ public class Journey {
     String currentRoute;//current route
     String currentBlock;//current block
     List<Route> routes = new ArrayList<>();
-//    List<Route> visited = new ArrayList<>();
-//    List<Route> rest = new ArrayList<>();
 
     public Journey(String id,String source, String dest) {
         this.id = id;

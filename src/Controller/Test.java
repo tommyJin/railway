@@ -10,8 +10,6 @@ import Util.JsonFile;
 public class Test {
     public static void main(String[] args){
         JsonFile jf = new JsonFile();
-//        jf.returnRailway();
-
 
         Railway railway = jf.returnRailway();
 
@@ -20,8 +18,8 @@ public class Test {
         String passby = "s1;s4;s7";
         railway.addJourney("j1", source, dest, passby);
         railway.addJourney("j2", "s1", "s7", "s1;s6;s7");
-//        railway.addJourney("j3", "s8", "s2", "s8;s3;s2");
-//        railway.addJourney("j4", "s8", "s2", "s8;s5;s2");
+        railway.addJourney("j3", "s8", "s2", "s8;s3;s2");
+        railway.addJourney("j4", "s8", "s2", "s8;s5;s2");
 
         boolean flag = true;
 
