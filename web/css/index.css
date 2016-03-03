@@ -1,0 +1,31 @@
+.frame{
+	width: 800px;
+	height: 500px;
+	border: 1px solid black;
+	margin-bottom: 30px;
+}
+
+.branchline{
+	margin-top: 200px;
+	margin-left: 250px;
+	width: 200px;
+	height: 3px;
+	border:3px solid black;
+}
+
+.mainline{
+	margin-top: 100px;
+	width: 800px;
+	height: 3px;
+	border:3px solid black;
+}
+
+.verticalLine1{
+	position:absolute; 
+	left:100px; 
+	top:300px; 
+	width: 3px;
+	height: 30px;
+	border:3px solid black;
+}
+
