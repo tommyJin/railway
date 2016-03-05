@@ -1,31 +1,235 @@
 .frame{
-	width: 800px;
+	width: 700px;
 	height: 500px;
 	border: 1px solid black;
 	margin-bottom: 30px;
 }
 
 .branchline{
+	position:relative;
+	z-index:1;
 	margin-top: 200px;
-	margin-left: 250px;
-	width: 200px;
+	margin-left: 300px;
+	width: 100px;
 	height: 3px;
 	border:3px solid black;
 }
 
 .mainline{
+	position:relative;
+	z-index:1;
 	margin-top: 100px;
-	width: 800px;
+	width: 700px;
 	height: 3px;
 	border:3px solid black;
 }
 
-.verticalLine1{
+.level1_0{
 	position:absolute; 
-	left:100px; 
-	top:300px; 
+	clear: both;
+	left:-5px; 
+	top:-15px; 
 	width: 3px;
 	height: 30px;
 	border:3px solid black;
 }
 
+.level1_1{
+	position:absolute; 
+	clear: both;
+	left:95px; 
+	top:-15px; 
+	width: 3px;
+	height: 30px;
+	border:3px solid black;
+}
+
+.level2_0{
+	position:absolute; 
+	clear: both;
+	left:-5px; 
+	top:-15px; 
+	width: 3px;
+	height: 30px;
+	border:3px solid black;
+}
+
+.level2_1{
+	position:absolute; 
+	left:95px; 
+	top:-15px; 
+	width: 3px;
+	height: 30px;
+	border:3px solid black;
+}
+
+.level2_2{
+	position:absolute; 
+	left:195px; 
+	top:-15px; 
+	width: 3px;
+	height: 30px;
+	border:3px solid black;
+}
+
+.level2_3{
+	position:absolute; 
+	left:295px; 
+	top:-15px; 
+	width: 3px;
+	height: 30px;
+	border:3px solid black;
+}
+
+.level2_4{
+	position:absolute; 
+	left:395px; 
+	top:-15px; 
+	width: 3px;
+	height: 30px;
+	border:3px solid black;
+}
+
+.level2_5{
+	position:absolute; 
+	left:495px; 
+	top:-15px; 
+	width: 3px;
+	height: 30px;
+	border:3px solid black;
+}
+
+.level2_6{
+	position:absolute; 
+	left:595px; 
+	top:-15px; 
+	width: 3px;
+	height: 30px;
+	border:3px solid black;
+}
+
+
+.level2_7{
+	position:absolute; 
+	left:690px; 
+	top:-15px; 
+	width: 3px;
+	height: 30px;
+	border:3px solid black;
+}
+
+
+.trapezoid {
+	position:absolute; 
+	left:250px; 
+	top:-103px; 
+	 border-bottom: 100px solid #B9B9B9;  
+	 border-left: 50px solid transparent;           
+	 border-right: 50px solid transparent;           
+	 width: 200px; 
+}
+
+.level0_up0 { 
+	position:absolute; 
+	left:70px; 
+	top:-80px; 
+	width: 0;     
+	height: 0;     
+	border-left: 15px solid transparent;  /* 左边框的宽 */    
+	border-right: 15px solid transparent; /* 右边框的宽 */    
+	border-bottom: 60px solid green; /* 下边框的长度|高,以及背景色 */    
+	font-size: 0;    
+	line-height: 0;    
+}  
+
+.level0_down0 { 
+	position:absolute; 
+	left:0px; 
+	top:-80px; 
+	width: 0;     
+	height: 0;     
+	border-left: 15px solid transparent;  /* 左边框的宽 */    
+	border-right: 15px solid transparent; /* 右边框的宽 */    
+	border-top: 60px solid green; /* 下边框的长度|高,以及背景色 */    
+	font-size: 0;    
+	line-height: 0;    
+}  
+
+.level1_up0 { 
+   	position:absolute; 
+	left:70px; 
+	top:20px; 
+	width: 0;     
+	height: 0;     
+	border-left: 15px solid transparent;  /* 左边框的宽 */    
+	border-right: 15px solid transparent; /* 右边框的宽 */    
+	border-bottom: 60px solid green; /* 下边框的长度|高,以及背景色 */    
+	font-size: 0;    
+	line-height: 0;    
+}  
+
+.level1_up1 { 
+   	position:absolute; 
+	left:370px; 
+	top:20px; 
+	width: 0;     
+	height: 0;     
+	border-left: 15px solid transparent;  /* 左边框的宽 */    
+	border-right: 15px solid transparent; /* 右边框的宽 */    
+	border-bottom: 60px solid green; /* 下边框的长度|高,以及背景色 */    
+	font-size: 0;    
+	line-height: 0;    
+}  
+
+.level1_up2 { 
+   	position:absolute; 
+	left:570px; 
+	top:20px; 
+	width: 0;     
+	height: 0;     
+	border-left: 15px solid transparent;  /* 左边框的宽 */    
+	border-right: 15px solid transparent; /* 右边框的宽 */    
+	border-bottom: 60px solid green; /* 下边框的长度|高,以及背景色 */    
+	font-size: 0;    
+	line-height: 0;    
+}  
+
+.level1_down0 { 
+	position:absolute; 
+	left:100px; 
+	top:-80px; 
+	width: 0;     
+	height: 0;     
+	border-left: 15px solid transparent;  /* 左边框的宽 */    
+	border-right: 15px solid transparent; /* 右边框的宽 */    
+	border-top: 60px solid green; /* 下边框的长度|高,以及背景色 */    
+	font-size: 0;    
+	line-height: 0;    
+}  
+
+.level1_down1 { 
+	position:absolute; 
+	left:300px; 
+	top:20px; 
+	width: 0;     
+	height: 0;     
+	border-left: 15px solid transparent;  /* 左边框的宽 */    
+	border-right: 15px solid transparent; /* 右边框的宽 */    
+	border-top: 60px solid green; /* 下边框的长度|高,以及背景色 */    
+	font-size: 0;    
+	line-height: 0;    
+}  
+
+
+.level1_down2 { 
+	position:absolute; 
+	left:600px; 
+	top:-80px; 
+	width: 0;     
+	height: 0;     
+	border-left: 15px solid transparent;  /* 左边框的宽 */    
+	border-right: 15px solid transparent; /* 右边框的宽 */    
+	border-top: 60px solid green; /* 下边框的长度|高,以及背景色 */    
+	font-size: 0;    
+	line-height: 0;    
+}  
