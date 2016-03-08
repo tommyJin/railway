@@ -5,6 +5,17 @@
 	margin-bottom: 30px;
 }
 
+.upsignals {
+	position:relative;
+	z-index:1;
+	margin-top: 100px;
+	margin-left: 300px;
+	width: 100px;
+}
+
+
+
+
 .branchline{
 	position:relative;
 	z-index:1;
@@ -25,84 +36,84 @@
 }
 
 .level1_0{
-	position:absolute; 
+	position:absolute;
 	clear: both;
-	left:-5px; 
-	top:-15px; 
+	left:-5px;
+	top:-15px;
 	width: 3px;
 	height: 30px;
 	border:3px solid black;
 }
 
 .level1_1{
-	position:absolute; 
+	position:absolute;
 	clear: both;
-	left:95px; 
-	top:-15px; 
+	left:95px;
+	top:-15px;
 	width: 3px;
 	height: 30px;
 	border:3px solid black;
 }
 
 .level2_0{
-	position:absolute; 
+	position:absolute;
 	clear: both;
-	left:-5px; 
-	top:-15px; 
+	left:-5px;
+	top:-15px;
 	width: 3px;
 	height: 30px;
 	border:3px solid black;
 }
 
 .level2_1{
-	position:absolute; 
-	left:95px; 
-	top:-15px; 
+	position:absolute;
+	left:95px;
+	top:-15px;
 	width: 3px;
 	height: 30px;
 	border:3px solid black;
 }
 
 .level2_2{
-	position:absolute; 
-	left:195px; 
-	top:-15px; 
+	position:absolute;
+	left:195px;
+	top:-15px;
 	width: 3px;
 	height: 30px;
 	border:3px solid black;
 }
 
 .level2_3{
-	position:absolute; 
-	left:295px; 
-	top:-15px; 
+	position:absolute;
+	left:295px;
+	top:-15px;
 	width: 3px;
 	height: 30px;
 	border:3px solid black;
 }
 
 .level2_4{
-	position:absolute; 
-	left:395px; 
-	top:-15px; 
+	position:absolute;
+	left:395px;
+	top:-15px;
 	width: 3px;
 	height: 30px;
 	border:3px solid black;
 }
 
 .level2_5{
-	position:absolute; 
-	left:495px; 
-	top:-15px; 
+	position:absolute;
+	left:495px;
+	top:-15px;
 	width: 3px;
 	height: 30px;
 	border:3px solid black;
 }
 
 .level2_6{
-	position:absolute; 
-	left:595px; 
-	top:-15px; 
+	position:absolute;
+	left:595px;
+	top:-15px;
 	width: 3px;
 	height: 30px;
 	border:3px solid black;
@@ -110,9 +121,9 @@
 
 
 .level2_7{
-	position:absolute; 
-	left:690px; 
-	top:-15px; 
+	position:absolute;
+	left:690px;
+	top:-15px;
 	width: 3px;
 	height: 30px;
 	border:3px solid black;
@@ -120,116 +131,270 @@
 
 
 .trapezoid {
-	position:absolute; 
-	left:250px; 
-	top:-103px; 
-	 border-bottom: 100px solid #B9B9B9;  
-	 border-left: 50px solid transparent;           
-	 border-right: 50px solid transparent;           
-	 width: 200px; 
+	position:absolute;
+	left:250px;
+	top:-103px;
+	border-bottom: 100px solid #B9B9B9;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	width: 200px;
 }
 
-.level0_up0 { 
-	position:absolute; 
-	left:70px; 
-	top:-80px; 
-	width: 0;     
-	height: 0;     
-	border-left: 15px solid transparent;  /* 左边框的宽 */    
-	border-right: 15px solid transparent; /* 右边框的宽 */    
-	border-bottom: 60px solid green; /* 下边框的长度|高,以及背景色 */    
-	font-size: 0;    
-	line-height: 0;    
+.level0_up0 {
+	position:absolute;
+	left:70px;
+	top:-80px;
+	width: 0;
+	height: 0;
+	border-left: 15px solid transparent;  
+	border-right: 15px solid transparent; 
+	border-bottom: 60px solid green; 
+	font-size: 0;
+	line-height: 0;
+}
+
+.level0_down0 {
+	position:absolute;
+	left:0px;
+	top:-80px;
+	width: 0;
+	height: 0;
+	border-left: 15px solid transparent;  
+	border-right: 15px solid transparent; 
+	border-top: 60px solid green; 
+	font-size: 0;
+	line-height: 0;
+}
+
+.level1_up0 {
+	position:absolute;
+	left:70px;
+	top:20px;
+	width: 0;
+	height: 0;
+	border-left: 15px solid transparent;  
+	border-right: 15px solid transparent;
+	border-bottom: 60px solid green; 
+	font-size: 0;
+	line-height: 0;
+}
+
+.level1_up1 {
+	position:absolute;
+	left:370px;
+	top:20px;
+	width: 0;
+	height: 0;
+	border-left: 15px solid transparent;  
+	border-right: 15px solid transparent; 
+	border-bottom: 60px solid green; 
+	font-size: 0;
+	line-height: 0;
+}
+
+.level1_up2 {
+	position:absolute;
+	left:570px;
+	top:20px;
+	width: 0;
+	height: 0;
+	border-left: 15px solid transparent;  
+	border-right: 15px solid transparent; 
+	border-bottom: 60px solid green; 
+	font-size: 0;
+	line-height: 0;
+}
+
+.level1_down0 {
+	position:absolute;
+	left:100px;
+	top:-80px;
+	width: 0;
+	height: 0;
+	border-left: 15px solid transparent; 
+	border-right: 15px solid transparent; 
+	border-top: 60px solid green; 
+	font-size: 0;
+	line-height: 0;
+}
+
+.level1_down1 {
+	position:absolute;
+	left:300px;
+	top:20px;
+	width: 0;
+	height: 0;
+	border-left: 15px solid transparent;  
+	border-right: 15px solid transparent; 
+	border-top: 60px solid green; 
+	font-size: 0;
+	line-height: 0;
+}
+
+
+.level1_down2 {
+	position:absolute;
+	left:600px;
+	top:-80px;
+	width: 0;
+	height: 0;
+	border-left: 15px solid transparent;  
+	border-right: 15px solid transparent; 
+	border-top: 60px solid green; 
+	font-size: 0;
+	line-height: 0;
 }  
 
-.level0_down0 { 
-	position:absolute; 
-	left:0px; 
-	top:-80px; 
-	width: 0;     
-	height: 0;     
-	border-left: 15px solid transparent;  /* 左边框的宽 */    
-	border-right: 15px solid transparent; /* 右边框的宽 */    
-	border-top: 60px solid green; /* 下边框的长度|高,以及背景色 */    
-	font-size: 0;    
-	line-height: 0;    
-}  
 
-.level1_up0 { 
-   	position:absolute; 
-	left:70px; 
-	top:20px; 
-	width: 0;     
-	height: 0;     
-	border-left: 15px solid transparent;  /* 左边框的宽 */    
-	border-right: 15px solid transparent; /* 右边框的宽 */    
-	border-bottom: 60px solid green; /* 下边框的长度|高,以及背景色 */    
-	font-size: 0;    
-	line-height: 0;    
-}  
+/* 
+	block area
+ */
 
-.level1_up1 { 
-   	position:absolute; 
-	left:370px; 
-	top:20px; 
-	width: 0;     
-	height: 0;     
-	border-left: 15px solid transparent;  /* 左边框的宽 */    
-	border-right: 15px solid transparent; /* 右边框的宽 */    
-	border-bottom: 60px solid green; /* 下边框的长度|高,以及背景色 */    
-	font-size: 0;    
-	line-height: 0;    
-}  
-
-.level1_up2 { 
-   	position:absolute; 
-	left:570px; 
-	top:20px; 
-	width: 0;     
-	height: 0;     
-	border-left: 15px solid transparent;  /* 左边框的宽 */    
-	border-right: 15px solid transparent; /* 右边框的宽 */    
-	border-bottom: 60px solid green; /* 下边框的长度|高,以及背景色 */    
-	font-size: 0;    
-	line-height: 0;    
-}  
-
-.level1_down0 { 
-	position:absolute; 
-	left:100px; 
-	top:-80px; 
-	width: 0;     
-	height: 0;     
-	border-left: 15px solid transparent;  /* 左边框的宽 */    
-	border-right: 15px solid transparent; /* 右边框的宽 */    
-	border-top: 60px solid green; /* 下边框的长度|高,以及背景色 */    
-	font-size: 0;    
-	line-height: 0;    
-}  
-
-.level1_down1 { 
-	position:absolute; 
-	left:300px; 
-	top:20px; 
-	width: 0;     
-	height: 0;     
-	border-left: 15px solid transparent;  /* 左边框的宽 */    
-	border-right: 15px solid transparent; /* 右边框的宽 */    
-	border-top: 60px solid green; /* 下边框的长度|高,以及背景色 */    
-	font-size: 0;    
-	line-height: 0;    
-}  
+.level1_block0 {
+	position:absolute;
+	z-index: 999;
+	left:40px;
+	top:30px;
+	height: 30px;
+	font-size: 20;
+}
 
 
-.level1_down2 { 
-	position:absolute; 
-	left:600px; 
-	top:-80px; 
-	width: 0;     
-	height: 0;     
-	border-left: 15px solid transparent;  /* 左边框的宽 */    
-	border-right: 15px solid transparent; /* 右边框的宽 */    
-	border-top: 60px solid green; /* 下边框的长度|高,以及背景色 */    
-	font-size: 0;    
-	line-height: 0;    
-}  
+.level2_block0 {
+	position:absolute;
+	left:40px;
+	top:-30px;
+	height: 30px;
+	font-size: 20;
+}
+
+.level2_block1 {
+	position:absolute;
+	left:140px;
+	top:-30px;
+	height: 30px;
+	font-size: 20;
+}
+
+.level2_block2 {
+	position:absolute;
+	left:240px;
+	top:-30px;
+	height: 30px;
+	font-size: 20;
+}
+
+.level2_block3 {
+	position:absolute;
+	left:340px;
+	top:-30px;
+	height: 30px;
+	font-size: 20;
+}
+
+.level2_block4 {
+	position:absolute;
+	left:440px;
+	top:-30px;
+	height: 30px;
+	font-size: 20;
+}
+
+.level2_block5 {
+	position:absolute;
+	left:540px;
+	top:-30px;
+	height: 30px;
+	font-size: 20;
+}
+
+.level2_block6 {
+	position:absolute;
+	left:640px;
+	top:-30px;
+	height: 30px;
+	font-size: 20;
+}
+
+
+
+/* 
+signal area
+ */
+
+
+.signal0_0 {
+	position:absolute;
+	clear: both;
+	left:0px;
+	top:-100px;
+	height: 30px;
+	font-size: 20;
+}
+
+.signal0_1 {
+	position:absolute;
+	clear: both;
+	left:80px;
+	top:-100px;
+	height: 30px;
+	font-size: 20;
+}
+
+/* 
+level2 signals
+ */
+
+.signal1_0 {
+	position:absolute;
+	clear: both;
+	left:75px;
+	top:80px;
+	height: 30px;
+	font-size: 20;
+}
+
+.signal1_1 {
+	position:absolute;
+	clear: both;
+	left:105px;
+	top:-110px;
+	height: 30px;
+	font-size: 20;
+}
+
+.signal1_2 {
+	position:absolute;
+	clear: both;
+	left:300px;
+	top:80px;
+	height: 30px;
+	font-size: 20;
+}
+
+.signal1_3 {
+	position:absolute;
+	clear: both;
+	left:375px;
+	top:80px;
+	height: 30px;
+	font-size: 20;
+}
+
+.signal1_4 {
+	position:absolute;
+	clear: both;
+	left:575px;
+	top:80px;
+	height: 30px;
+	font-size: 20;
+}
+
+.signal1_5 {
+	position:absolute;
+	clear: both;
+	left:605px;
+	top:-110px;
+	height: 30px;
+	font-size: 20;
+}

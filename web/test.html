@@ -10,7 +10,7 @@
 
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="bootstrap/css/docs.min.css">
-        <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript">
         function jsonAjaxPost() {
@@ -50,22 +50,22 @@
     }
 
     function uploadMap(){
-    	var fd = new FormData();
-    fd.append("fileToUpload", blobFile);
+        var fd = new FormData();
+        fd.append("fileToUpload", blobFile);
 
-    $.ajax({
-       url: "upload.php",
-       type: "POST",
-       data: fd,
-       processData: false,
-       contentType: false,
-       success: function(response) {
-           // .. do something
-       },
-       error: function(jqXHR, textStatus, errorMessage) {
-           console.log(errorMessage); // Optional
-       }
-    });
+        $.ajax({
+            url: "upload.php",
+            type: "POST",
+            data: fd,
+            processData: false,
+            contentType: false,
+            success: function(response) {
+                // .. do something
+            },
+            error: function(jqXHR, textStatus, errorMessage) {
+                console.log(errorMessage); // Optional
+            }
+        });
     }
 
     function addTrain() {
@@ -106,15 +106,15 @@
 
 <div id ="mainbody" class="container" data-example-id="basic-forms">
     <form  method="post" enctype="multipart/form-data">
-    	<div class="form-group">
-    	<label for="exampleInputFile">File input</label>
-    	<input type="file" id="map">
-    	<p class="help-block">Example block-level help text here.</p>
-  </div>
+        <div class="form-group">
+            <label for="exampleInputFile">File input</label>
+            <input type="file" id="map">
+            <p class="help-block">Example block-level help text here.</p>
+        </div>
 
-   <div class="col-md-2">
-                    <button type="button" class="btn btn-default" onclick="addTrain()">Submit</button>
-               </div>
+        <div class="col-md-2">
+            <button type="button" class="btn btn-default" onclick="addTrain()">Submit</button>
+        </div>
     </form>
 
     <form id="form">
@@ -211,133 +211,99 @@
     </div>
 
     <div  class="frame">
-    	
-    	<div class="branchline">
-    		<!--  arrow area-->
-    		<div class="level0_up0"></div>
-    		<div class="level0_down0"></div>
+        <div id="map1">
+
+        <div class="upsignals">
+                <div class="signal0_0">s3</div>
+                <div class="signal0_1">s4</div>
+        </div>
+
+        <div class="branchline">
+            <!--  arrow area-->
+            <div class="level0_up0"></div>
+            <div class="level0_down0"></div>
 
 
-    		<!--  verticalLine area -->
-    		<div class="level1_0"></div>
-    			<div class="level1_1"></div>
-    		</div>
-	<div class="mainline">
-		<div class="trapezoid"></div>
+            <!--  verticalLine area -->
+            <div class="level1_0"></div>
+            <div class="level1_1"></div>
 
-		<!--  arrow area-->
-    		<div class="level1_up0"></div>
-		<div class="level1_up1"></div>
-		<div class="level1_up2"></div>
+        <!--  block area -->
+            <div class="level1_block0">b3</div>
 
-		<div class="level1_down0"></div>
-		<div class="level1_down1"></div>
-		<div class="level1_down2"></div>
-    	
-    		<!--  verticalLine area -->
-		<div class="level2_0"></div>
-		<div class="level2_1"></div>
-		<div class="level2_2"></div>
-		<div class="level2_3"></div>
-		<div class="level2_4"></div>
-		<div class="level2_5"></div>
-		<div class="level2_6"></div>
-		<div class="level2_7"></div>
-	</div>
-	
+        </div>
+        <div class="mainline">
+            <div class="trapezoid"></div>
+
+            <!--  arrow area-->
+            <div class="level1_up0"></div>
+            <div class="level1_up1"></div>
+            <div class="level1_up2"></div>
+
+            <div class="level1_down0"></div>
+            <div class="level1_down1"></div>
+            <div class="level1_down2"></div>
+
+            <!--  verticalLine area -->
+            <div class="level2_0"></div>
+            <div class="level2_1"></div>
+            <div class="level2_2"></div>
+            <div class="level2_3"></div>
+            <div class="level2_4"></div>
+            <div class="level2_5"></div>
+            <div class="level2_6"></div>
+            <div class="level2_7"></div>
+
+        <!--  block area -->
+            <div class="level2_block0">b1</div>
+            <div class="level2_block1">b2</div>
+            <div class="level2_block2">p1</div>
+            <div class="level2_block3">b4</div>
+            <div class="level2_block4">p2</div>
+            <div class="level2_block5">b5</div>
+            <div class="level2_block6">b6</div>
 
 
-	</div>
+            <div class="signal1_0">s1</div>
+            <div class="signal1_1">s2</div>
+            <div class="signal1_2">s5</div>
+            <div class="signal1_3">s6</div>
+            <div class="signal1_4">s7</div>
+            <div class="signal1_5">s8</div>
+        </div>
 
-    <div id="railway" class="bs-example" >
-
-        <script >
-            window.onload = function(){
-                var canvas = document.getElementById("myCanvas");
-                var context = canvas.getContext("2d");
-                //横线与竖线的间隔距离
-                var dx = 60;
-                var dy = 60;
-                //初始坐标点
-                var x=0;
-                var y=0;
-                var w=canvas.width;
-                var h=canvas.height;
-                //单个步长所表示的长度
-                var xy=10;
-                //画横线
-                while(y<h){
-                    y=y+dy;
-                    context.moveTo(x, y);
-                    context.lineTo(w,y);
-                    context.stroke();
-                    //横坐标的数字
-                    context.font = "1pt Calibri";
-                    context.fillText(xy, x, y);
-                    xy+=10;
-                }
-                //画竖线
-                y=0;
-                xy=10;
-                while(x<w){
-                    x=x+dx;
-                    context.moveTo(x, y);
-                    context.lineTo(x,h);
-                    context.stroke();
-                    //纵坐标的数字
-                    context.font = "1pt Calibri";
-                    context.fillText(xy,x,10);
-                    xy+=10;
-                }
-
-            };
-        </script>
-        <!-- <canvas id="myCanvas" width="1200" height="1200"></canvas> -->
-
-<img id="scream" style="display: none;" width="200" height="100" src="img/map1.png" alt="The Scream">
-        <canvas id="myCanvas" width="800" height="350" style="border:1px solid #d3d3d3;">
-Your browser does not support the HTML5 canvas tag.
-</canvas>
-
-<script>
-window.onload = function() {
-    var c = document.getElementById("myCanvas");
-    var ctx = c.getContext("2d");
-    var img = document.getElementById("scream");
-    ctx.drawImage(img, 10, 10);
-}
-</script>
     </div>
+</div>
 
 </div>
 
 <div style="display: none">
-<form id="form1" method="post">
-    <p>
-        comment:
-    </p>
+    <form id="form1" method="post">
+        <p>
+            comment:
+        </p>
 
-    <p>
-        username:
-        <input type="text" name="username" id="username"/>
-    </p>
+        <p>
+            username:
+            <input type="text" name="username" id="username"/>
+        </p>
 
-    <p>
-        content:
-        <textarea name="content" id="content" rows="2" cols="20"></textarea>
-    </p>
+        <p>
+            content:
+            <textarea name="content" id="content" rows="2" cols="20"></textarea>
+        </p>
 
-    <p>
-        <input type="button" id="send" value="submit" onclick="jsonAjaxPost()"/>
-    </p>
-</form>
-<div class="comment">
-    return value:
-    <p id="resultJsonText"></p>
-</div>
-<div id="resText">
-</div>
+        <p>
+            <input type="button" id="send" value="submit" onclick="jsonAjaxPost()"/>
+        </p>
+    </form>
+    <div class="comment">
+        return value:
+        <p id="resultJsonText"></p>
+    </div>
+    <div id="resText">
+    </div>
 </div>
 
 </body>
-</html>  
+</html>
